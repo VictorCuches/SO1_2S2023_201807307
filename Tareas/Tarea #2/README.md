@@ -10,5 +10,7 @@ Victor Alejandro Cuches de Leon 201807307
 ## Captura del contenedor corriendo, por medio de docker ps
 ![](img/captura3.png)
 
+![](img/captura3_2.png)
+
 ## Captura de postman
 ![](img/captura4.png)
