@@ -1,0 +1,6 @@
+# Comando para poder conectar a mysql
+go get -u gorm.io/gorm
+
+Nota: Primero tiene que estar creado el archivo go.mod
+sino existe ejecutar go mod init nombre_del_modulo
+
