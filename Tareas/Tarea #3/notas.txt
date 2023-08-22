@@ -1,6 +1,18 @@
+# como instalar fiber para el backend
+go get -u github.com/gofiber/fiber/v2
+-- se hace en la carpeta en la que estoy trabajando 
+
 # Comando para poder conectar a mysql
 go get -u gorm.io/gorm
 
 Nota: Primero tiene que estar creado el archivo go.mod
 sino existe ejecutar go mod init nombre_del_modulo
+
+# instalar drive de mysql 
+go get gorm.io/driver/mysql
+
+# para instalar mysql en docker
+docker pull mysql
+
+docker run -d -p 33061:3306 --name DB -e MYSQL_ROOT_PASSWORD=28800 -v mysql:/var/lib/mysql mysql
 
