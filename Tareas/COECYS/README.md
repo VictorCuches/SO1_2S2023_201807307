@@ -17,6 +17,6 @@ Me pareció interesante la conferencia, es un tema que me llamo mucho la atenci�
 - Terraform es una herramienta esencial en el mundo tecnológico actual y está relacionada con prácticas como DevOps. Al aprender Terraform, como estudiante estoy adquiriendo habilidades relevantes y demandadas en la industria.
 
 ### Asistencia conferencia
-![](/asistencia.png)
+![](asistencia.png)
 
 
