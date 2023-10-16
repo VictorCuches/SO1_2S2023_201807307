@@ -1,4 +1,11 @@
 
+# redis 
+npm install redis
+
+
+
+
+
 #crear imagen de docker
 sudo docker build -t victorcuches28/proyecto_uno_node .
 
