@@ -1,0 +1,5 @@
+
+#instalar las dos librerias en grpc-client
+go get google.golang.org/grpc
+go get github.com/gofiber/fiber/v2
+

@@ -1,0 +1,6 @@
+
+#descargar locust 
+pip install locust
+
+#ejecutar
+locust -f traffic.py

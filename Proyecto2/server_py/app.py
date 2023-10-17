@@ -3,14 +3,14 @@ import redis
 import json
 
 app = Flask(__name__)
-redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
+redis_client = redis.StrictRedis(host='localhost', port=6379, db=15)
 
 @app.route('/')
 def hola_mundo():
     return 'Hola mundo 201807307'
 
 
-@app.route('/agregar_album', methods=['POST'])
+@app.route('/set_album', methods=['POST'])
 def agregar_album():
     try:
         data = request.get_json()
@@ -37,10 +37,47 @@ def agregar_album():
         redis_key = f'album:{album}'
         redis_client.set(redis_key, album_json)
 
-        return jsonify({'message': f'Álbum "{album}" agregado a Redis'}), 201
+        return jsonify({'message': f'"{album}" registrado en Redis'}), 201
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+@app.route('/registrar_alumno', methods=['POST'])
+def registrar_alumno():
+    try:
+        data = request.get_json()
+ 
+        required_fields = ['carnet', 'nombre', 'curso', 'nota', 'semestre', 'year']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({'error': f'Falta el campo obligatorio: {field}'}), 400
+
+        carnet = data['carnet']
+        curso = data['curso']
+        year = data['year']
+ 
+        alumno_data = {
+            'carnet': carnet,
+            'nombre': data['nombre'],
+            'curso': curso,
+            'nota': data['nota'],
+            'semestre': data['semestre'],
+            'year': year
+        }
+ 
+        alumno_json = json.dumps(alumno_data)
+ 
+        redis_key = f'alumno:{carnet}:{curso}:{year}'
+        redis_client.set(redis_key, alumno_json)
+
+        print("*** REDIS *** registro almacenado")
+
+        return jsonify({'message': f'Alumno "{data["nombre"]}" registrado en Redis'}), 201
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 
 if __name__ == '__main__':

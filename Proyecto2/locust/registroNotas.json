@@ -1,0 +1,3402 @@
+[
+    {
+      "carnet": 201000001,
+      "nombre": "Juan Perez",
+      "curso": "SO1",
+      "nota": 90,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000002,
+      "nombre": "Maria Rodriguez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000003,
+      "nombre": "Carlos Lopez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000004,
+      "nombre": "Laura Martinez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000005,
+      "nombre": "Luis Gomez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000006,
+      "nombre": "Ana Perez",
+      "curso": "SO1",
+      "nota": 90,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000007,
+      "nombre": "Diego Lopez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000008,
+      "nombre": "Elena Rodriguez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000009,
+      "nombre": "Maria Perez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201000010,
+      "nombre": "Carlos Gomez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+        "carnet": 201000011,
+        "nombre": "Juan Rodriguez",
+        "curso": "SO1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000012,
+        "nombre": "Luis Martinez",
+        "curso": "BD1",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000013,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000014,
+        "nombre": "Ana Gomez",
+        "curso": "SA",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000015,
+        "nombre": "Diego Perez",
+        "curso": "AYD1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000016,
+        "nombre": "Maria Lopez",
+        "curso": "SO1",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000017,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000018,
+        "nombre": "Laura Perez",
+        "curso": "LFP",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000019,
+        "nombre": "Juan Martinez",
+        "curso": "SA",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000020,
+        "nombre": "Luis Lopez",
+        "curso": "AYD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000021,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000022,
+        "nombre": "Ana Martinez",
+        "curso": "BD1",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000023,
+        "nombre": "Diego Gomez",
+        "curso": "LFP",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000024,
+        "nombre": "Carlos Lopez",
+        "curso": "SA",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000025,
+        "nombre": "Maria Perez",
+        "curso": "AYD1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000026,
+        "nombre": "Laura Martinez",
+        "curso": "SO1",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000027,
+        "nombre": "Juan Lopez",
+        "curso": "BD1",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000028,
+        "nombre": "Luis Perez",
+        "curso": "LFP",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000029,
+        "nombre": "Carlos Gomez",
+        "curso": "SA",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000030,
+        "nombre": "Elena Rodriguez",
+        "curso": "AYD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000031,
+        "nombre": "Diego Lopez",
+        "curso": "SO1",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000032,
+        "nombre": "Ana Martinez",
+        "curso": "BD1",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000033,
+        "nombre": "Juan Perez",
+        "curso": "LFP",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000034,
+        "nombre": "Maria Gomez",
+        "curso": "SA",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000035,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000036,
+        "nombre": "Carlos Lopez",
+        "curso": "SO1",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000037,
+        "nombre": "Laura Perez",
+        "curso": "BD1",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000038,
+        "nombre": "Diego Gomez",
+        "curso": "LFP",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000039,
+        "nombre": "Juan Martinez",
+        "curso": "SA",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000040,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000041,
+        "nombre": "Ana Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000042,
+        "nombre": "Elena Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000043,
+        "nombre": "Luis Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000044,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000045,
+        "nombre": "Carlos Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000046,
+        "nombre": "Laura Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000047,
+        "nombre": "Maria Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000048,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000049,
+        "nombre": "Elena Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000050,
+        "nombre": "Ana Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000051,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000052,
+        "nombre": "Luis Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000053,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000054,
+        "nombre": "Laura Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000055,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000056,
+        "nombre": "Carlos Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000057,
+        "nombre": "Juan Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000058,
+        "nombre": "Luis Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000059,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201000060,
+        "nombre": "Elena Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100001,
+        "nombre": "Elena Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100002,
+        "nombre": "Juan Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201200001,
+        "nombre": "Diego Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201300001,
+        "nombre": "Laura Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201400001,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100003,
+        "nombre": "Ana Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201200002,
+        "nombre": "Maria Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201300002,
+        "nombre": "Luis Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201400002,
+        "nombre": "Diego Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100004,
+        "nombre": "Laura Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201200003,
+        "nombre": "Carlos Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201300003,
+        "nombre": "Elena Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201400003,
+        "nombre": "Juan Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100005,
+        "nombre": "Ana Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201200004,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201300004,
+        "nombre": "Luis Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201400004,
+        "nombre": "Carlos Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201100006,
+        "nombre": "Laura Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201200005,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201300005,
+        "nombre": "Elena Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201500001,
+        "nombre": "Ana Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600001,
+        "nombre": "Juan Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201700001,
+        "nombre": "Laura Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201800001,
+        "nombre": "Diego Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201900001,
+        "nombre": "Maria Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201500002,
+        "nombre": "Carlos Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600002,
+        "nombre": "Luis Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201700002,
+        "nombre": "Elena Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201800002,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201900002,
+        "nombre": "Laura Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201500003,
+        "nombre": "Ana Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600003,
+        "nombre": "Juan Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201700003,
+        "nombre": "Luis Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201800003,
+        "nombre": "Carlos Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201900003,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202000001,
+        "nombre": "Elena Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202100001,
+        "nombre": "Carlos Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202200001,
+        "nombre": "Diego Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202300001,
+        "nombre": "Laura Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202400001,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202500001,
+        "nombre": "Juan Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202600001,
+        "nombre": "Luis Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202700001,
+        "nombre": "Carlos Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202800001,
+        "nombre": "Laura Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202900001,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202500002,
+        "nombre": "Diego Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202600002,
+        "nombre": "Ana Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202700002,
+        "nombre": "Elena Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202800002,
+        "nombre": "Carlos Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202900002,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202500003,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202600003,
+        "nombre": "Diego Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202700003,
+        "nombre": "Laura Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202800003,
+        "nombre": "Juan Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202900003,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 203000001,
+        "nombre": "Carlos Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 203100001,
+        "nombre": "Ana Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 203200001,
+        "nombre": "Juan Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 203300001,
+        "nombre": "Luis Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 203400001,
+        "nombre": "Diego Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202301001,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202302001,
+        "nombre": "Carlos Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202303001,
+        "nombre": "Laura Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202304001,
+        "nombre": "Juan Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202305001,
+        "nombre": "Ana Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202301002,
+        "nombre": "Diego Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202302002,
+        "nombre": "Luis Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202303002,
+        "nombre": "Maria Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202304002,
+        "nombre": "Carlos Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202305002,
+        "nombre": "Elena Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202301003,
+        "nombre": "Juan Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202302003,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202303003,
+        "nombre": "Diego Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202304003,
+        "nombre": "Ana Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202305003,
+        "nombre": "Luis Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202301004,
+        "nombre": "Maria Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202302004,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202303004,
+        "nombre": "Elena Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202304004,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202305004,
+        "nombre": "Laura Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202401001,
+        "nombre": "Ana Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202402001,
+        "nombre": "Juan Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202403001,
+        "nombre": "Luis Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202404001,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202405001,
+        "nombre": "Laura Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202401002,
+        "nombre": "Elena Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202402002,
+        "nombre": "Diego Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202403002,
+        "nombre": "Ana Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202404002,
+        "nombre": "Maria Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202405002,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202401003,
+        "nombre": "Diego Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202402003,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202403003,
+        "nombre": "Carlos Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202404003,
+        "nombre": "Elena Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202405003,
+        "nombre": "Juan Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202401004,
+        "nombre": "Luis Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202402004,
+        "nombre": "Maria Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202403004,
+        "nombre": "Carlos Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202404004,
+        "nombre": "Elena Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202405004,
+        "nombre": "Diego Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202406001,
+        "nombre": "Juan Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202407001,
+        "nombre": "Ana Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202408001,
+        "nombre": "Carlos Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202409001,
+        "nombre": "Diego Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202410001,
+        "nombre": "Elena Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202406002,
+        "nombre": "Luis Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202407002,
+        "nombre": "Maria Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202408002,
+        "nombre": "Juan Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202409002,
+        "nombre": "Laura Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202410002,
+        "nombre": "Carlos Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202406003,
+        "nombre": "Elena Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202407003,
+        "nombre": "Diego Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202408003,
+        "nombre": "Ana Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202409003,
+        "nombre": "Laura Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202410003,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202406004,
+        "nombre": "Carlos Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202407004,
+        "nombre": "Luis Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202408004,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 202409004,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 202410004,
+        "nombre": "Ana Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600001,
+        "nombre": "Juan Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600002,
+        "nombre": "Ana Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600003,
+        "nombre": "Carlos Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600004,
+        "nombre": "Elena Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600005,
+        "nombre": "Juan Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600006,
+        "nombre": "Laura Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600007,
+        "nombre": "Diego Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600008,
+        "nombre": "Maria Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600009,
+        "nombre": "Carlos Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600010,
+        "nombre": "Luis Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600011,
+        "nombre": "Ana Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600012,
+        "nombre": "Juan Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600013,
+        "nombre": "Luis Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600014,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600015,
+        "nombre": "Elena Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600016,
+        "nombre": "Carlos Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600017,
+        "nombre": "Maria Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600018,
+        "nombre": "Laura Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600019,
+        "nombre": "Juan Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600020,
+        "nombre": "Ana Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600021,
+        "nombre": "Luis Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600022,
+        "nombre": "Diego Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600023,
+        "nombre": "Elena Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600024,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600025,
+        "nombre": "Ana Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600026,
+        "nombre": "Juan Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600027,
+        "nombre": "Laura Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600028,
+        "nombre": "Maria Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600029,
+        "nombre": "Carlos Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600030,
+        "nombre": "Luis Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600031,
+        "nombre": "Diego Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600032,
+        "nombre": "Ana Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600033,
+        "nombre": "Juan Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600034,
+        "nombre": "Laura Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600035,
+        "nombre": "Elena Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600036,
+        "nombre": "Carlos Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600037,
+        "nombre": "Maria Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600038,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600039,
+        "nombre": "Luis Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600040,
+        "nombre": "Ana Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600041,
+        "nombre": "Elena Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600042,
+        "nombre": "Diego Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600043,
+        "nombre": "Ana Gomez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600044,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600045,
+        "nombre": "Juan Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600046,
+        "nombre": "Luis Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600047,
+        "nombre": "Diego Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600048,
+        "nombre": "Maria Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600049,
+        "nombre": "Carlos Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600050,
+        "nombre": "Elena Perez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600051,
+        "nombre": "Carlos Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600052,
+        "nombre": "Maria Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600053,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600054,
+        "nombre": "Luis Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600055,
+        "nombre": "Ana Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600056,
+        "nombre": "Juan Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600057,
+        "nombre": "Laura Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600058,
+        "nombre": "Carlos Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600059,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600060,
+        "nombre": "Elena Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600061,
+        "nombre": "Ana Perez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600062,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600063,
+        "nombre": "Luis Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600064,
+        "nombre": "Diego Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600065,
+        "nombre": "Elena Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600066,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600068,
+        "nombre": "Luis Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600069,
+        "nombre": "Diego Perez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600070,
+        "nombre": "Ana Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600071,
+        "nombre": "Juan Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600072,
+        "nombre": "Laura Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600073,
+        "nombre": "Carlos Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600074,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600075,
+        "nombre": "Elena Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600076,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600077,
+        "nombre": "Maria Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600078,
+        "nombre": "Ana Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600079,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600080,
+        "nombre": "Diego Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600081,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600082,
+        "nombre": "Carlos Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600083,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600084,
+        "nombre": "Laura Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600085,
+        "nombre": "Ana Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600086,
+        "nombre": "Juan Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600087,
+        "nombre": "Maria Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600088,
+        "nombre": "Laura Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600089,
+        "nombre": "Carlos Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600090,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600091,
+        "nombre": "Diego Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600092,
+        "nombre": "Ana Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600093,
+        "nombre": "Juan Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600094,
+        "nombre": "Laura Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600095,
+        "nombre": "Carlos Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600096,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600097,
+        "nombre": "Diego Perez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600098,
+        "nombre": "Maria Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600099,
+        "nombre": "Carlos Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600100,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600101,
+        "nombre": "Elena Martinez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600102,
+        "nombre": "Carlos Rodriguez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600103,
+        "nombre": "Juan Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600104,
+        "nombre": "Ana Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600105,
+        "nombre": "Diego Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600106,
+        "nombre": "Luis Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600107,
+        "nombre": "Elena Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600108,
+        "nombre": "Carlos Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600109,
+        "nombre": "Diego Rodriguez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600110,
+        "nombre": "Luis Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600111,
+        "nombre": "Maria Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600112,
+        "nombre": "Ana Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600113,
+        "nombre": "Carlos Martinez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600114,
+        "nombre": "Diego Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600115,
+        "nombre": "Elena Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600116,
+        "nombre": "Luis Lopez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600117,
+        "nombre": "Ana Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600118,
+        "nombre": "Juan Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600119,
+        "nombre": "Carlos Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600120,
+        "nombre": "Elena Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600121,
+        "nombre": "Diego Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600122,
+        "nombre": "Luis Gomez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600123,
+        "nombre": "Maria Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600124,
+        "nombre": "Carlos Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600125,
+        "nombre": "Diego Martinez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600126,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201600127,
+        "nombre": "Juan Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910001,
+        "nombre": "Ana Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910002,
+        "nombre": "Carlos Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910003,
+        "nombre": "Diego Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910004,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910005,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910006,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910007,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910008,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910009,
+        "nombre": "Ana Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910010,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910011,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910012,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910013,
+        "nombre": "Luis Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910014,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910015,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910016,
+        "nombre": "Laura Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910017,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910018,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910019,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910020,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910021,
+        "nombre": "Ana Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910022,
+        "nombre": "Carlos Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910023,
+        "nombre": "Diego Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910024,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910025,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910026,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910027,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910028,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910029,
+        "nombre": "Ana Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910030,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910031,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910032,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910033,
+        "nombre": "Luis Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910034,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910035,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910036,
+        "nombre": "Laura Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910037,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910038,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910039,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910040,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+    {
+      "carnet": 201910042,
+      "nombre": "Carlos Lopez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910043,
+      "nombre": "Diego Rodriguez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910044,
+      "nombre": "Luis Martinez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910045,
+      "nombre": "Maria Lopez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910046,
+      "nombre": "Carlos Rodriguez",
+      "curso": "SO1",
+      "nota": 90,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910047,
+      "nombre": "Laura Lopez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910048,
+      "nombre": "Diego Perez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910049,
+      "nombre": "Ana Lopez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910050,
+      "nombre": "Carlos Gomez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910051,
+      "nombre": "Elena Rodriguez",
+      "curso": "SO1",
+      "nota": 90,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910052,
+      "nombre": "Juan Martinez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910053,
+      "nombre": "Luis Lopez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910054,
+      "nombre": "Diego Gomez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910055,
+      "nombre": "Maria Rodriguez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910056,
+      "nombre": "Laura Rodriguez",
+      "curso": "SO1",
+      "nota": 90,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910057,
+      "nombre": "Carlos Martinez",
+      "curso": "BD1",
+      "nota": 80,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910058,
+      "nombre": "Elena Lopez",
+      "curso": "LFP",
+      "nota": 70,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910059,
+      "nombre": "Diego Martinez",
+      "curso": "SA",
+      "nota": 60,
+      "semestre": "1S",
+      "year": 2023
+    },
+    {
+      "carnet": 201910060,
+      "nombre": "Luis Gomez",
+      "curso": "AYD1",
+      "nota": 50,
+      "semestre": "2S",
+      "year": 2023
+    },
+    {
+        "carnet": 201910061,
+        "nombre": "Ana Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910062,
+        "nombre": "Carlos Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910063,
+        "nombre": "Diego Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910064,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910065,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910066,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910067,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910068,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910069,
+        "nombre": "Ana Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910070,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910071,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910072,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910073,
+        "nombre": "Luis Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910074,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910075,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910076,
+        "nombre": "Laura Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910077,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910078,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910079,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910080,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910081,
+        "nombre": "Ana Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910082,
+        "nombre": "Carlos Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910083,
+        "nombre": "Diego Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910084,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910085,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910086,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910087,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910088,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910089,
+        "nombre": "Ana Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910090,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910091,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910092,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910093,
+        "nombre": "Luis Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910094,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910095,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910096,
+        "nombre": "Laura Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910097,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910098,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910099,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910100,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910101,
+        "nombre": "Ana Gomez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910102,
+        "nombre": "Carlos Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910103,
+        "nombre": "Diego Rodriguez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910104,
+        "nombre": "Luis Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910105,
+        "nombre": "Maria Lopez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910106,
+        "nombre": "Carlos Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910107,
+        "nombre": "Laura Lopez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910108,
+        "nombre": "Diego Perez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910109,
+        "nombre": "Ana Lopez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910110,
+        "nombre": "Carlos Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910111,
+        "nombre": "Elena Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910112,
+        "nombre": "Juan Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910113,
+        "nombre": "Luis Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910114,
+        "nombre": "Diego Gomez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910115,
+        "nombre": "Maria Rodriguez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910116,
+        "nombre": "Laura Rodriguez",
+        "curso": "SO1",
+        "nota": 90,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910117,
+        "nombre": "Carlos Martinez",
+        "curso": "BD1",
+        "nota": 80,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910118,
+        "nombre": "Elena Lopez",
+        "curso": "LFP",
+        "nota": 70,
+        "semestre": "2S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910119,
+        "nombre": "Diego Martinez",
+        "curso": "SA",
+        "nota": 60,
+        "semestre": "1S",
+        "year": 2023
+      },
+      {
+        "carnet": 201910120,
+        "nombre": "Luis Gomez",
+        "curso": "AYD1",
+        "nota": 50,
+        "semestre": "2S",
+        "year": 2023
+      }
+  ]
