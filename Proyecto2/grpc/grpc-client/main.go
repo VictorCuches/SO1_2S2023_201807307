@@ -14,10 +14,12 @@ import (
 var ctx = context.Background()
 
 type Data struct {
-	Album  string
-	Year   string
-	Artist string
-	Ranked string
+	Carnet   string
+	Nombre   string
+	Curso    string
+	Nota     string
+	Semestre string
+	Year     string
 }
 
 func insertData(c *fiber.Ctx) error {
@@ -28,10 +30,12 @@ func insertData(c *fiber.Ctx) error {
 	}
 
 	rank := Data{
-		Album:  data["album"],
-		Year:   data["year"],
-		Artist: data["artist"],
-		Ranked: data["ranked"],
+		Carnet:   data["carnet"],
+		Nombre:   data["nombre"],
+		Curso:    data["curso"],
+		Nota:     data["nota"],
+		Semestre: data["semestre"],
+		Year:     data["year"],
 	}
 
 	sendRedisServer(rank)
@@ -56,10 +60,12 @@ func sendRedisServer(rank Data) {
 	}(conn)
 
 	ret, err := cl.ReturnInfo(ctx, &pb.RequestId{
-		Artist: rank.Artist,
-		Album:  rank.Album,
-		Year:   rank.Year,
-		Ranked: rank.Ranked,
+		Carnet:   rank.Carnet,
+		Nombre:   rank.Nombre,
+		Curso:    rank.Curso,
+		Nota:     rank.Nota,
+		Semestre: rank.Semestre,
+		Year:     rank.Year,
 	})
 	if err != nil {
 		log.Fatalln(err)
@@ -77,7 +83,7 @@ func main() {
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
-			"res": "todo bien",
+			"res": "Hola desde grpc-client",
 		})
 	})
 	app.Post("/insert", insertData)
