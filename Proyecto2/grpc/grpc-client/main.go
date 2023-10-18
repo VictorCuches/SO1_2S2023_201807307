@@ -14,28 +14,46 @@ import (
 var ctx = context.Background()
 
 type Data struct {
-	Carnet   string
+	Carnet   uint64
 	Nombre   string
 	Curso    string
-	Nota     string
+	Nota     uint32
 	Semestre string
-	Year     string
+	Year     uint32
 }
 
 func insertData(c *fiber.Ctx) error {
-	var data map[string]string
+	var data map[string]interface{}
 	e := c.BodyParser(&data)
 	if e != nil {
 		return e
 	}
 
+	// Parsear el carnet como un valor numérico
+	carnet, ok := data["carnet"].(float64)
+	if !ok {
+		return fmt.Errorf("El campo 'carnet' debe ser un número")
+	}
+
+	// Parsear la nota como un valor numérico
+	nota, ok := data["nota"].(float64)
+	if !ok {
+		return fmt.Errorf("El campo 'nota' debe ser un número")
+	}
+
+	// Parsear el year como un valor numérico
+	year, ok := data["year"].(float64)
+	if !ok {
+		return fmt.Errorf("El campo 'year' debe ser un número")
+	}
+
 	rank := Data{
-		Carnet:   data["carnet"],
-		Nombre:   data["nombre"],
-		Curso:    data["curso"],
-		Nota:     data["nota"],
-		Semestre: data["semestre"],
-		Year:     data["year"],
+		Carnet:   uint64(carnet),
+		Nombre:   data["nombre"].(string),
+		Curso:    data["curso"].(string),
+		Nota:     uint32(nota),
+		Semestre: data["semestre"].(string),
+		Year:     uint32(year),
 	}
 
 	sendRedisServer(rank)
@@ -60,12 +78,12 @@ func sendRedisServer(rank Data) {
 	}(conn)
 
 	ret, err := cl.ReturnInfo(ctx, &pb.RequestId{
-		Carnet:   rank.Carnet,
+		Carnet:   uint64(rank.Carnet),
 		Nombre:   rank.Nombre,
 		Curso:    rank.Curso,
-		Nota:     rank.Nota,
+		Nota:     uint32(rank.Nota),
 		Semestre: rank.Semestre,
-		Year:     rank.Year,
+		Year:     uint32(rank.Year),
 	})
 	if err != nil {
 		log.Fatalln(err)

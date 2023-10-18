@@ -23,12 +23,12 @@ const (
 )
 
 type Data struct {
-	Carnet   string
+	Carnet   uint64
 	Nombre   string
 	Curso    string
-	Nota     string
+	Nota     uint32
 	Semestre string
-	Year     string
+	Year     uint32
 }
 
 /*func redisConnect() {
