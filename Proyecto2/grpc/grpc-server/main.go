@@ -73,7 +73,7 @@ func getDB() (*sql.DB, error) {
 }
 
 func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInfo, error) {
-	fmt.Println("Recibí de cliente: ", in.GetCarnet())
+	fmt.Println("grpc-client: datos de estudiante ", in.GetCarnet())
 	data := Data{
 		Carnet:   in.GetCarnet(),
 		Nombre:   in.GetNombre(),
@@ -82,11 +82,11 @@ func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInf
 		Semestre: in.GetSemestre(),
 		Year:     in.GetYear(),
 	}
-	fmt.Println(data)
+	// fmt.Println(data)
 
 	insertDataMySQL(data)
 
-	return &pb.ReplyInfo{Info: "Hola cliente, recibí el comentario"}, nil
+	return &pb.ReplyInfo{Info: "Insercion de registros realizada con exito"}, nil
 }
 
 func insertDataMySQL(data Data) error {

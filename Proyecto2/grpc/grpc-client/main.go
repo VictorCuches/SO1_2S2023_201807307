@@ -90,7 +90,7 @@ func sendRedisServer(rank Data) {
 		log.Fatalln(err)
 	}
 
-	fmt.Println("Respuesta del server " + ret.GetInfo())
+	fmt.Println("grpc-server: " + ret.GetInfo())
 }
 
 func sendMysqlServer(rank Data) {
