@@ -2,17 +2,20 @@ package main
 
 import (
 	"context"
+	"database/sql"
 	"fmt"
 	pb "golangServer/grpcServer"
 	"log"
 	"net"
+	"os"
 
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/joho/godotenv"
 	"google.golang.org/grpc"
 )
 
 var ctx = context.Background()
-
-// var rdb *redis.Client
+var db *sql.DB
 
 type server struct {
 	pb.UnimplementedGetInfoServer
@@ -31,19 +34,41 @@ type Data struct {
 	Year     uint32
 }
 
-/*func redisConnect() {
-	rdb = redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
-		Password: "",
-		DB:       15,
-	})
+var _ = godotenv.Load(".env") // Cargar del archivo llamado ".env"
+var (
+	ConnectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+		os.Getenv("MYSQLDB_USER"),
+		os.Getenv("MYSQLDB_PASS"),
+		os.Getenv("MYSQLDB_HOST"),
+		os.Getenv("MYSQLDB_PORT"),
+		os.Getenv("MYSQLDB_DB"))
+)
 
-	pong, err := rdb.Ping(ctx).Result()
+func main() {
+	// Establecer conexión a la base de datos MySQL
+	// db, err := sql.Open("mysql", "root:root@tcp(34.170.239.207:3306)/sopes")
+	// if err != nil {
+	// 	log.Fatal("Error al conectar a la base de datos:", err)
+	// } else {
+	// 	fmt.Println("Conexión a la base de datos establecida correctamente.")
+	// }
+	// defer db.Close()
+
+	listen, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalln(err)
 	}
-	fmt.Println(pong)
-}*/
+	s := grpc.NewServer()
+	pb.RegisterGetInfoServer(s, &server{})
+
+	if err := s.Serve(listen); err != nil {
+		log.Fatalln(err)
+	}
+}
+
+func getDB() (*sql.DB, error) {
+	return sql.Open("mysql", ConnectionString)
+}
 
 func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInfo, error) {
 	fmt.Println("Recibí de cliente: ", in.GetCarnet())
@@ -56,44 +81,29 @@ func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInf
 		Year:     in.GetYear(),
 	}
 	fmt.Println(data)
-	// insertRedis(data)
+
+	// Insertar datos en la tabla calificacion
+	// query := "INSERT INTO calificacion (carnet, nombre, curso, nota, semestre, year) VALUES (?, ?, ?, ?, ?, ?)"
+	// _, err := db.ExecContext(ctx, query, data.Carnet, data.Nombre, data.Curso, data.Nota, data.Semestre, data.Year)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// 	return nil, err
+	// }
+	insertDataMySQL(data)
+
 	return &pb.ReplyInfo{Info: "Hola cliente, recibí el comentario"}, nil
 }
 
-/*func insertRedis(rank Data) {
-	array := rank.Artist + "-" + rank.Year
-	ranked, _ := strconv.ParseFloat(rank.Ranked, 64)
-
-	rdb.ZAddArgsIncr(ctx, array, redis.ZAddArgs{
-		XX:      false,
-		NX:      true,
-		Members: []redis.Z{{Score: ranked, Member: rank.Album}},
-	})
-
-	key := array + "-" + rank.Album
-	rdb.HIncrBy(ctx, key, rank.Ranked, 1)
-}*/
-
-//func getData(c *fiber.Ctx) error {
-//	key := c.Params("key")
-//
-//	dataRet, _ := rdb.HGetAll(ctx, key).Result()
-//	return c.JSON(fiber.Map{
-//		"res": dataRet,
-//	})
-//}
-
-func main() {
-	listen, err := net.Listen("tcp", port)
+func insertDataMySQL(data Data) error {
+	bd, err := getDB()
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println("ERROR AL CONECTAR A LA BASE DE DATOS ", err)
+		return err
 	}
-	s := grpc.NewServer()
-	pb.RegisterGetInfoServer(s, &server{})
-
-	// redisConnect()
-
-	if err := s.Serve(listen); err != nil {
-		log.Fatalln(err)
+	_, err = bd.Exec("INSERT INTO calificacion (carnet, nombre, curso, nota, semestre, year) VALUES (?, ?, ?, ?, ?, ?)", data.Carnet, data.Nombre, data.Curso, data.Nota, data.Semestre, data.Year)
+	if err != nil {
+		fmt.Println("ERROR AL INSERTAR DATOS ", err)
+		return err
 	}
+	return err
 }
