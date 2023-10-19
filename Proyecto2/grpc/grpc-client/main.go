@@ -7,6 +7,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -98,6 +99,13 @@ func sendMysqlServer(rank Data) {
 
 func main() {
 	app := fiber.New()
+
+	// Configura el middleware CORS para aceptar cualquier origen
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+		AllowMethods: "GET, POST, PUT, DELETE",
+		AllowHeaders: "Origin, Content-Type, Accept",
+	}))
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{

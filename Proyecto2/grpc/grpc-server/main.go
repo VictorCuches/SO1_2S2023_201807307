@@ -54,6 +54,8 @@ func main() {
 	// }
 	// defer db.Close()
 
+	// TODO: Revisar CORS si no me deja conectarme a esta api
+
 	listen, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalln(err)
@@ -82,13 +84,6 @@ func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInf
 	}
 	fmt.Println(data)
 
-	// Insertar datos en la tabla calificacion
-	// query := "INSERT INTO calificacion (carnet, nombre, curso, nota, semestre, year) VALUES (?, ?, ?, ?, ?, ?)"
-	// _, err := db.ExecContext(ctx, query, data.Carnet, data.Nombre, data.Curso, data.Nota, data.Semestre, data.Year)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// 	return nil, err
-	// }
 	insertDataMySQL(data)
 
 	return &pb.ReplyInfo{Info: "Hola cliente, recibí el comentario"}, nil

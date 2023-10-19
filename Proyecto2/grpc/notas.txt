@@ -9,6 +9,11 @@ go get google.golang.org/grpc
 go get google.golang.org/grpc/codes
 go get google.golang.org/grpc/credentials/insecure
 go get google.golang.org/grpc/status
+go get -u github.com/gofiber/fiber/v2/middleware/cors
+
+# instalar librerias en grpc-server 
+go get github.com/gorilla/mux
+go get github.com/rs/cors
 
 # compilar archivos .proto
 protoc --go_out=. --go-grpc_out=. client.proto
