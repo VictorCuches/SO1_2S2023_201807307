@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import GraphLine from "../components/GraphLine";
+import GraphPie from "../components/GraphPie";
+
+import TableData from "../components/TableData";
 
 const History = () => {
   const [selectVM, setSelectVM] = useState("VM1");
@@ -61,36 +64,30 @@ const History = () => {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center py-4">
-      <div className="card col-10  shadow-lg mb-5 bg-white rounded">
-        <div className="card-body">
-          <div className="row d-flex justify-content-center">
-          <h3>Historial</h3>
-            <div className="col-5 my-2 d-flex align-items-center">
-              <Form.Select
-                aria-label="Default select example"
-                onChange={handleSelectChange}
-                className="form-control"
-              >
-                {listVM.map((item) => (
-                  <option key={item.value} value={item.value}>
-                    {item.label}
-                  </option>
-                ))}
-              </Form.Select>
-              <button className="btn btn-primary ml-2" onClick={refresh}>
-                  <i className="bi bi-arrow-clockwise"></i>
-                </button>
+    <div className="container">
+      <div className="row py-3">
+        <div className="col-8">
+          <div className="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div className="card-body">
+              <TableData/>
             </div>
           </div>
+        </div>
 
-          <div className="my-4">
-            <div className="d-inline-block col-6">
-              <GraphLine title="Porcentaje de uso RAM" color="orange" dates={fechasHistory} dataHistory={ramHistory}/>
+        <div className="col-4">
+          <div className="card shadow-lg mb-5 bg-white rounded">
+            <div className="card-body">
+              <GraphPie/>
             </div>
-
-            <div className="d-inline-block col-6" >
-              <GraphLine title="Porcentaje de uso CPU" color="green" dates={fechasHistory} dataHistory={cpuHistory} />
+          </div>
+          <div className="card shadow-lg mb-5 bg-white rounded">
+            <div className="card-body">
+              <GraphLine/>
+            </div>
+          </div>
+          <div className="card shadow-lg mb-5 bg-white rounded">
+            <div className="card-body">
+              <GraphLine/>
             </div>
           </div>
         </div>

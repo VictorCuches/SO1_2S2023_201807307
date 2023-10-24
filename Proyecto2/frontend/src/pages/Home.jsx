@@ -20,23 +20,19 @@ const Home = () => {
   //   }
   // };
 
-  useEffect(() => {   
-    socket.emit("obtener_registros");
+  // useEffect(() => {   
+  //   socket.emit("obtener_registros");
 
-    socket.on("registros", (data) => {
-      console.log("Registros recibidos:", data);
-      setRegistros(data)
-    });
+  //   socket.on("registros", (data) => {
+  //     console.log("Registros recibidos:", data);
+  //     setRegistros(data)
+  //   });
 
-  }, []);
+  // }, []);
 
   return (
     <div>
-      <ul>
-        {registros.map((registro, index) => (
-          <li key={index}>{registro.clave}: {registro.valor}</li>
-        ))}
-      </ul>
+      <h1>Victor Cuches</h1>
 
     </div>
   )
