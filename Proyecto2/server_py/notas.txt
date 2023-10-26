@@ -1,3 +1,18 @@
+#crear imagen de docker
+docker build -t gcr.io/swift-synthesis-397705/server_python .
+
+#subir imagen a container registry
+sudo docker push gcr.io/swift-synthesis-397705/server_python
+
+#desplegar imagen 
+kubectl create deployment python-deployment --image gcr.io/swift-synthesis-397705/server_python
+
+#exponer despliegue
+kubectl expose deployment python-deployment --type=LoadBalancer --port 4000
+
+kubectl get deployment
+kubectl create namespace nombreeee
+
 # comandos en la instancia vm
 sudo apt update
 sudo apt upgrade

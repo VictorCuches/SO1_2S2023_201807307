@@ -1,0 +1,9 @@
+# comandos kubernetes
+
+# conectarme al cluster
+gcloud container clusters get-credentials cluster-sopes1 --zone us-central1-c
+
+# traer toda la info del cluster
+kubectl get all
+
+
