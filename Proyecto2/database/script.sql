@@ -16,3 +16,5 @@ INSERT INTO calificacion(carnet, nombre, curso, nota, semestre, year)
 VALUES(201807307, 'Victor Cuches', 'SO1', 80, '2S', 2023);
 
 SELECT * FROM calificacion;
+
+DROP TABLE calificacion
