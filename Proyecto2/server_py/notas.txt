@@ -12,8 +12,15 @@ kubectl create deployment python-deployment --image victorcuches28/api_python
 kubectl expose deployment python-deployment --type=LoadBalancer --port 4000
 kubectl expose deployment python-deployment --type=LoadBalancer --port 4000
 
+kubectl apply -f deploy.yaml 
+kubectl delete -f deploy.yaml 
+
+
 kubectl get deployment
 kubectl create namespace nombreeee
+
+
+
 
 # comandos en la instancia vm
 sudo apt update
