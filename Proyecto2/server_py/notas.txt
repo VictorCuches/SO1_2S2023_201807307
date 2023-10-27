@@ -6,8 +6,10 @@ sudo docker push gcr.io/swift-synthesis-397705/server_python
 
 #desplegar imagen 
 kubectl create deployment python-deployment --image gcr.io/swift-synthesis-397705/server_python
+kubectl create deployment python-deployment --image victorcuches28/api_python
 
 #exponer despliegue
+kubectl expose deployment python-deployment --type=LoadBalancer --port 4000
 kubectl expose deployment python-deployment --type=LoadBalancer --port 4000
 
 kubectl get deployment

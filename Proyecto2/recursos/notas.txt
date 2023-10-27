@@ -7,3 +7,5 @@ gcloud container clusters get-credentials cluster-sopes1 --zone us-central1-c
 kubectl get all
 
 
+# crear reglas de firewall
+conferencia del curso explican como hacerlo paso a paso
