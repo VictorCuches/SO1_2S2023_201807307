@@ -10,7 +10,11 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def hola_mundo():
-    return 'Hola mundo 201807307'
+    return 'Proyecto 2 - 201807307'
+
+@app.route('/prueba')
+def prueba():
+    return 'CAMBIO DE ENDPOINT'
 
 
 # @app.route('/set_album', methods=['POST'])
