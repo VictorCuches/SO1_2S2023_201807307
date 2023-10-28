@@ -1,7 +1,5 @@
 
 const express = require('express')
-const redis = require('redis'); 
-const axios = require('axios');
 const dotenv = require('dotenv')
 const router = express.Router();
 const mysql = require('mysql2/promise');
@@ -29,57 +27,49 @@ async function connectToDatabase() {
         throw err;
     }
 }
+
  
-const client = redis.createClient({
-    host: 'localhost',
-    port: 6379,
+router.get('/rutasbd', (req, res) => {
+  res.send('RUTA BD');
 });
 
-const GET_ASYNC = promisify(client.get).bind(client);
-const SET_ASYNC = promisify(client.set).bind(client);
+router.get('/prueba', async (req, res) => {
+    try {
+        const connection = await connectToDatabase();
 
- 
-router.get('/obtener_registros', async (req, res) => {
-    console.log("obtener_registros")
-    // Crear un array para almacenar los registros
-    const registros = [];
-  
-    // Escaneo de las claves que coinciden con la convención de nomenclatura
-    const scanPattern = 'album:*'; // Las claves que comienzan con "album:"
-    
-    client.keys(scanPattern, (err, keys) => {
-      if (err) {
-        res.status(500).json({ error: 'Error al escanear las claves en Redis' });
-        return;
-      }
-  
-      // Obtener los valores asociados a las claves
-      if (keys.length === 0) {
-        res.json([]); // No se encontraron registros
-        return;
-      }
-  
-      const multi = client.multi();
-      for (const clave of keys) {
-        multi.get(clave);
-      }
-  
-      // Ejecutar todas las operaciones de GET en Redis
-      multi.exec((getErr, valores) => {
-        if (getErr) {
-          res.status(500).json({ error: 'Error al obtener los valores de Redis' });
-        } else {
-          // Devolver los registros como respuesta
-          const registrosConValores = keys.map((clave, index) => ({
-            clave,
-            valor: valores[index],
-          }));
-          res.json(registrosConValores);
-        }
-      });
-    });
-  });
-  
+        const [rows] = await connection.execute(
+            `SELECT * FROM curso`
+        );
+        res.json(rows);
+
+        connection.end();
+    } catch (error) {
+        console.error('Error al obtener datos: ', error);
+        res.status(500).json({ error: 'Error al obtener datos' });
+    }
+});
+
+router.get('/getAllData', async (req, res) => {
+    try {
+        const connection = await connectToDatabase();
+
+        const [rows] = await connection.execute(
+            `SELECT 
+                al.carnet, al.nombre,
+                reg.nota, reg.semestre, reg.anio, reg.cod_curso
+             FROM 
+                alumno al 
+                INNER JOIN registro reg ON reg.carnet = al.carnet`
+        );
+        res.json(rows);
+        
+        connection.end();
+    } catch (error) {
+        console.error('Error al obtener datos: ', error);
+        res.status(500).json({ error: 'Error al obtener datos' });
+    }
+});
+
 
 
 

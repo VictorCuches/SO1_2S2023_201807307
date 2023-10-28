@@ -44,5 +44,8 @@ VALUES('AYD1', 'Análisis y Diseño 1');
 SELECT * FROM curso;
 
 CALL registro_estudiante(201807307, 'Victor Cuches', 'SO1', 60, '2S', 2023);
-SELECT * FROM alumno
-SELECT * FROM registro
+
+SELECT * 
+FROM 
+	alumno al 
+    INNER JOIN registro reg ON reg.carnet = al.carnet

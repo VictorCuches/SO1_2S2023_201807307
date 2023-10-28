@@ -11,7 +11,6 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
-// app.use(bodyParser.json());
 
 const { Server } = require('socket.io');
 const io = new Server(server, {
@@ -26,17 +25,16 @@ const client = new Redis({
   host: 'localhost',
   port: 6379,
   password: '',
-  db: 0,
+  db: 15,
 });
 
 app.get('/', (req, res) => {
-  res.send('¡Hola, Mundo desde Node!');
+  res.send('Proyecto 2 SOPES 1');
 });
-
 
 app.get('/obtener_registros', async (req, res) => {
   try { 
-    const keys = await client.keys('album:*');
+    const keys = await client.keys('alumno:*');
  
     if (keys.length === 0) {
       return res.json([]);  
@@ -60,41 +58,79 @@ app.get('/obtener_registros', async (req, res) => {
 io.on('connection', (socket) => {
   console.log('Cliente conectado');
   
-  // Definir una función que obtiene y emite los registros
   const obtenerYEnviarRegistros = async () => {
     try {
-      const keys = await client.keys('album:*');
-
-      if (keys.length === 0) {
-        socket.emit('registros', []); // Enviar una respuesta al cliente
-        return;
-      }
-
+      const keys = await client.keys('alumno:*');
+      const totalRegistros = keys.length;
       const valores = await client.mget(...keys);
 
-      const registros = keys.map((clave, index) => ({
-        clave,
-        valor: valores[index],
-      }));
+      const estudiantesPorCurso = {};
 
-      socket.emit('registros', registros); // Enviar una respuesta al cliente
+      valores.forEach((valor) => {
+        const registro = JSON.parse(valor);
+        const curso = registro.curso;
+
+        if (estudiantesPorCurso[curso]) {
+          estudiantesPorCurso[curso]++;
+        } else {
+          estudiantesPorCurso[curso] = 1;
+        }
+      });
+
+      const datosParaGrafica = {
+        totalRegistros,
+        cursos: Object.keys(estudiantesPorCurso),
+        cantidades: Object.values(estudiantesPorCurso),
+      };
+
+      socket.emit('registros', datosParaGrafica);
     } catch (error) {
       console.error('Error al obtener registros desde Redis', error);
-      socket.emit('error', 'Error al obtener registros desde Redis'); // Enviar un error al cliente
+      socket.emit('error', 'Error al obtener registros desde Redis');
     }
   };
 
-  // Ejecutar la función cada segundo con setInterval
   const interval = setInterval(obtenerYEnviarRegistros, 1000);
 
-  // Manejar la desconexión del cliente
   socket.on('disconnect', () => {
     console.log('Cliente desconectado');
-    // Limpiar el intervalo cuando el cliente se desconecta
     clearInterval(interval);
   });
 });
 
+app.get('/obtenerRegistros', async (req, res) => {
+  try {
+    const keys = await client.keys('alumno:*');
+    const totalRegistros = keys.length;
+    const valores = await client.mget(...keys);
+
+    const estudiantesPorCurso = {};
+
+    valores.forEach((valor) => {
+      const registro = JSON.parse(valor);
+      const curso = registro.curso;
+
+      if (estudiantesPorCurso[curso]) {
+        estudiantesPorCurso[curso]++;
+      } else {
+        estudiantesPorCurso[curso] = 1;
+      }
+    });
+
+    const datosParaGrafica = {
+      totalRegistros,
+      cursos: Object.keys(estudiantesPorCurso),
+      cantidades: Object.values(estudiantesPorCurso),
+    };
+
+    res.json(datosParaGrafica);
+  } catch (error) {
+    console.error('Error al obtener registros desde Redis', error);
+    res.status(500).json({ error: 'Error al obtener registros desde Redis' });
+  }
+});
+
+app.use(require('./routes/consultas.js'));
 
 
 server.listen(port, () => {

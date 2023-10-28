@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
 import GraphLine from "../components/GraphLine";
 import GraphPie from "../components/GraphPie";
 
 import TableData from "../components/TableData";
 
 const History = () => {
-  const [selectVM, setSelectVM] = useState("VM1");
-  const [fechasHistory, setFechasHistory] = useState([]);
-  const [cpuHistory, setCpuHistory] = useState([]);
-  const [ramHistory, setRamHistory] = useState([]);
+  const [dataStudents, setDataStudents] = useState([]);
+
 
   const listVM = [
     { value: "VM1", label: "Maquina Virtual 1" },
@@ -22,41 +19,25 @@ const History = () => {
   const loadDataHistory = async () => {
     console.log("REACT: loadDataHistory")
     try {
-      const response = await fetch(`${API_NODE_URL}/dataHistory/${selectVM}`);
+      const response = await fetch(`${API_NODE_URL}/getAllData`);
       if (!response.ok) {
         throw new Error("No se pudo obtener la respuesta de la API.");
       }
 
       const data = await response.json();
 
-      const fechas = data.map(item => item.fecha);
-      const ram = data.map(item => item.ram);
-      const cpu = data.map(item => item.cpu);
-
-      setFechasHistory(fechas);
-      setRamHistory(ram);
-      setCpuHistory(cpu);
-
-      console.log(fechas)
-      console.log(ram)
-      console.log(cpu)
-
+      console.log(data);
+      setDataStudents(data);
  
     } catch (error) {
       console.log(error.message);
     }
   }
 
-  const refresh = () => {
-    setFechasHistory([]);
-    setRamHistory([]);
-    setCpuHistory([]);
-    loadDataHistory()
-  };
+
 
   const handleSelectChange = (event) => {
     const valueSelect = event.target.value;
-    setSelectVM(valueSelect);
   };
 
   useEffect(() => {   
@@ -69,7 +50,7 @@ const History = () => {
         <div className="col-8">
           <div className="card shadow-lg p-3 mb-5 bg-white rounded">
             <div className="card-body">
-              <TableData/>
+              <TableData dataEstudents={dataStudents}  />
             </div>
           </div>
         </div>

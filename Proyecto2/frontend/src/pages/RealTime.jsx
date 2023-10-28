@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Table from "../components/TableData.jsx";
-import GraphPie from "../components/GraphPie";
+import GraphHorizontal from "../components/GraphHorizontal";
 import "bootstrap-icons/font/bootstrap-icons.css"; 
+import socket from '../socket/Socket';
+
+
+
 const RealTime = () => {
-  const [processVM, setProcessVM] = useState([]);
-  const [porcentajeGraph, setPorcentajeGraph] = useState({cpu:0, ram: 0});
-  const [textFilter, setTextFilter] = useState("");
-  const [selectVM, setSelectVM] = useState("VM1"); 
+  const [registros, setRegistros] = useState([]);
+  const [cursos, setCursos] = useState([]);
+  const [noStudents, setNoStudents] = useState([]);
+  const [noData, setNoData] = useState(0);
+
 
   const listSemester = [
     { value: "", label: "Seleccione Semestre" },
@@ -17,71 +22,23 @@ const RealTime = () => {
 
   const API_NODE_URL = process.env.REACT_APP_API_URL;
 
- 
-  const loadDataGraphs = async () => {
-    console.log("REACT: loadDataGraphs")
-    try {
-      const response_ram = await fetch(`${API_NODE_URL}/infoRam/${selectVM}`);
-      if (!response_ram.ok) {
-        throw new Error("No se pudo obtener la respuesta de la API.");
-      }
-
-      const response_cpu = await fetch(`${API_NODE_URL}/porcentaje_uso_cpu/${selectVM}`);
-      if (!response_cpu.ok) {
-        throw new Error("No se pudo obtener la respuesta de la API.");
-      }
-
-      const data_ram = await response_ram.json();
-      const data_cpu = await response_cpu.json();
-
-      setPorcentajeGraph({cpu: data_cpu.cpu_porcentaje, ram: data_ram.Porcentaje});
-
-      const body = {
-        "ram": data_ram.Porcentaje,
-        "cpu": data_cpu.cpu_porcentaje,
-        "maquina": selectVM
-      } 
-      const response_history = await fetch(`${API_NODE_URL}/saveHistory`, {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body),
-      });
-      
-      if (!response_history.ok) {
-        throw new Error("No se pudo obtener la respuesta de la API.");
-      }
-      const data_history = await response_history.json(); 
-      console.log("Historial guardado")
- 
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
-
-  const refresh = () => {
-    setTextFilter("");
-    loadDataGraphs();
-  };
-
   const handleSelectChange = (event) => {
     const valueSelect = event.target.value;
     
-    setSelectVM(valueSelect);
-    refresh()
   };
 
-  // useEffect(() => {   
-  //   loadProcessVM();
-  //   loadDataGraphs();
-  //   const intervalId = setInterval(() => { 
-  //     console.log("REACT: Actualizando graficas")
-  //     loadDataGraphs();
-  //   }, 30000);
-   
-  //   return () => clearInterval(intervalId);
-  // }, [selectVM]);
+  useEffect(() => {   
+    socket.emit("obtener_registros");
+
+    socket.on("registros", (data) => {
+      // console.log("Registros recibidos:", data);
+      setNoData(data.totalRegistros)
+      setCursos(data.cursos)
+      setNoStudents(data.cantidades)
+      setRegistros(data)
+    });
+
+  }, []);
 
   return (
     <div className="container ">
@@ -94,7 +51,7 @@ const RealTime = () => {
               <div className="d-flex justify-content-center col-12">
                 <div className="shadow-lg p-3 mb-2 bg-white rounded col-4 text-center">
                   <div>
-                    <h1>12345</h1>
+                    <h1>{noData}</h1>
                   </div>
                   <div>
                     <span>Cantidad de datos</span>                    
@@ -117,13 +74,15 @@ const RealTime = () => {
                 </Form.Select>
               </div>
 
-              <h3>Curso vs Cant de Alumnos</h3>
+              {/* <h3>Curso vs Cant de Alumnos</h3> */}
               {/* <button onClick={prueba}>Historial MySQL</button> */}
               
               
-              <div className="my-4">
+              {/* <div className="my-4">
                 {processVM ? <Table data={processVM} /> : <p>Cargando...</p>}
-              </div>
+              </div> */}
+
+              <GraphHorizontal courses={cursos} noStudents={noStudents} />
               
             </div>
           </div>

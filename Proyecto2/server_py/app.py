@@ -75,10 +75,9 @@ def registro_mysql(data):
         print("*** PYTHON/MYSQL *** registro almacenado")
 
     except Exception as e:
-        # Manejo de errores
         print(str(e))
-    finally:
-        db_cursor.close()
+    # finally:
+    #     db_cursor.close()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=4000)
