@@ -61,29 +61,59 @@ io.on('connection', (socket) => {
   const obtenerYEnviarRegistros = async () => {
     try {
       const keys = await client.keys('alumno:*');
-      const totalRegistros = keys.length;
       const valores = await client.mget(...keys);
 
-      const estudiantesPorCurso = {};
+      const registros1S = [];
+      const registros2S = [];
 
       valores.forEach((valor) => {
         const registro = JSON.parse(valor);
         const curso = registro.curso;
+        const semestre = registro.semestre;
 
-        if (estudiantesPorCurso[curso]) {
-          estudiantesPorCurso[curso]++;
-        } else {
-          estudiantesPorCurso[curso] = 1;
+        if (semestre === "1S") {
+          registros1S.push(registro);
+        } else if (semestre === "2S") {
+          registros2S.push(registro);
         }
       });
 
-      const datosParaGrafica = {
-        totalRegistros,
-        cursos: Object.keys(estudiantesPorCurso),
-        cantidades: Object.values(estudiantesPorCurso),
+      const estudiantesPorCurso1S = {};
+      const estudiantesPorCurso2S = {};
+
+      registros1S.forEach((registro) => {
+        const curso = registro.curso;
+
+        if (estudiantesPorCurso1S[curso]) {
+          estudiantesPorCurso1S[curso]++;
+        } else {
+          estudiantesPorCurso1S[curso] = 1;
+        }
+      });
+
+      registros2S.forEach((registro) => {
+        const curso = registro.curso;
+
+        if (estudiantesPorCurso2S[curso]) {
+          estudiantesPorCurso2S[curso]++;
+        } else {
+          estudiantesPorCurso2S[curso] = 1;
+        }
+      });
+
+      const datosParaGrafica1S = {
+        totalRegistros: registros1S.length,
+        cursos: Object.keys(estudiantesPorCurso1S),
+        cantidades: Object.values(estudiantesPorCurso1S),
       };
 
-      socket.emit('registros', datosParaGrafica);
+      const datosParaGrafica2S = {
+        totalRegistros: registros2S.length,
+        cursos: Object.keys(estudiantesPorCurso2S),
+        cantidades: Object.values(estudiantesPorCurso2S),
+      };
+
+      socket.emit('registros', { datosParaGrafica1S, datosParaGrafica2S });
     } catch (error) {
       console.error('Error al obtener registros desde Redis', error);
       socket.emit('error', 'Error al obtener registros desde Redis');
@@ -101,29 +131,59 @@ io.on('connection', (socket) => {
 app.get('/obtenerRegistros', async (req, res) => {
   try {
     const keys = await client.keys('alumno:*');
-    const totalRegistros = keys.length;
-    const valores = await client.mget(...keys);
+      const valores = await client.mget(...keys);
 
-    const estudiantesPorCurso = {};
+      const registros1S = [];
+      const registros2S = [];
 
-    valores.forEach((valor) => {
-      const registro = JSON.parse(valor);
-      const curso = registro.curso;
+      valores.forEach((valor) => {
+        const registro = JSON.parse(valor);
+        const curso = registro.curso;
+        const semestre = registro.semestre;
 
-      if (estudiantesPorCurso[curso]) {
-        estudiantesPorCurso[curso]++;
-      } else {
-        estudiantesPorCurso[curso] = 1;
-      }
-    });
+        if (semestre === "1S") {
+          registros1S.push(registro);
+        } else if (semestre === "2S") {
+          registros2S.push(registro);
+        }
+      });
 
-    const datosParaGrafica = {
-      totalRegistros,
-      cursos: Object.keys(estudiantesPorCurso),
-      cantidades: Object.values(estudiantesPorCurso),
-    };
+      const estudiantesPorCurso1S = {};
+      const estudiantesPorCurso2S = {};
 
-    res.json(datosParaGrafica);
+      registros1S.forEach((registro) => {
+        const curso = registro.curso;
+
+        if (estudiantesPorCurso1S[curso]) {
+          estudiantesPorCurso1S[curso]++;
+        } else {
+          estudiantesPorCurso1S[curso] = 1;
+        }
+      });
+
+      registros2S.forEach((registro) => {
+        const curso = registro.curso;
+
+        if (estudiantesPorCurso2S[curso]) {
+          estudiantesPorCurso2S[curso]++;
+        } else {
+          estudiantesPorCurso2S[curso] = 1;
+        }
+      });
+
+      const datosParaGrafica1S = {
+        totalRegistros: registros1S.length,
+        cursos: Object.keys(estudiantesPorCurso1S),
+        cantidades: Object.values(estudiantesPorCurso1S),
+      };
+
+      const datosParaGrafica2S = {
+        totalRegistros: registros2S.length,
+        cursos: Object.keys(estudiantesPorCurso2S),
+        cantidades: Object.values(estudiantesPorCurso2S),
+      };
+
+    res.json( { datosParaGrafica1S, datosParaGrafica2S });
   } catch (error) {
     console.error('Error al obtener registros desde Redis', error);
     res.status(500).json({ error: 'Error al obtener registros desde Redis' });

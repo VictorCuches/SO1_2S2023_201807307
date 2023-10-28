@@ -8,35 +8,37 @@ import socket from '../socket/Socket';
 
 
 const RealTime = () => {
-  const [registros, setRegistros] = useState([]);
-  const [cursos, setCursos] = useState([]);
-  const [noStudents, setNoStudents] = useState([]);
-  const [noData, setNoData] = useState(0);
-
+  const [registros, setRegistros] = useState({});
+  const [semester, setSemester] = useState('1S');
 
   const listSemester = [
-    { value: "", label: "Seleccione Semestre" },
     { value: "1S", label: "Primer Semestre" },
     { value: "2S", label: "Segundo Semestre" },
   ];
 
-  const API_NODE_URL = process.env.REACT_APP_API_URL;
-
   const handleSelectChange = (event) => {
     const valueSelect = event.target.value;
-    
+    console.log(valueSelect)
+    setSemester(valueSelect);    
+    loadRegistros()
   };
 
-  useEffect(() => {   
+  const loadRegistros = () => {
     socket.emit("obtener_registros");
-
+    
     socket.on("registros", (data) => {
-      // console.log("Registros recibidos:", data);
-      setNoData(data.totalRegistros)
-      setCursos(data.cursos)
-      setNoStudents(data.cantidades)
-      setRegistros(data)
+      console.log("Registros recibidos:", data);
+      if(semester === '1S'){
+        setRegistros(data.datosParaGrafica1S)
+      } else {
+        setRegistros(data.datosParaGrafica2S)
+      }
     });
+
+  }
+
+  useEffect(() => {   
+    loadRegistros();
 
   }, []);
 
@@ -51,7 +53,7 @@ const RealTime = () => {
               <div className="d-flex justify-content-center col-12">
                 <div className="shadow-lg p-3 mb-2 bg-white rounded col-4 text-center">
                   <div>
-                    <h1>{noData}</h1>
+                    <h1>{registros.totalRegistros}</h1>
                   </div>
                   <div>
                     <span>Cantidad de datos</span>                    
@@ -82,7 +84,7 @@ const RealTime = () => {
                 {processVM ? <Table data={processVM} /> : <p>Cargando...</p>}
               </div> */}
 
-              <GraphHorizontal courses={cursos} noStudents={noStudents} />
+              <GraphHorizontal courses={registros.cursos} noStudents={registros.cantidades} />
               
             </div>
           </div>

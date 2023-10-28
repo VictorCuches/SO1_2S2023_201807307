@@ -58,9 +58,6 @@ const GraphHorizontal = ({courses, noStudents}) => {
         ],
     };
 
-    console.log("courses", courses) 
-
-
   return <Bar options={options} data={data} />;
 };
 
