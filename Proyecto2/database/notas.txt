@@ -1,0 +1,4 @@
+# deploy a redis 
+kubectl apply -f redisDeploy.yaml 
+
+kubectl get service -n so1p2
