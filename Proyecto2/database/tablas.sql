@@ -45,7 +45,9 @@ SELECT * FROM curso;
 
 CALL registro_estudiante(201807307, 'Victor Cuches', 'SO1', 60, '2S', 2023);
 
-SELECT * 
+SELECT 
+	al.carnet, al.nombre,
+    reg.nota, reg.semestre, reg.anio, reg.cod_curso
 FROM 
 	alumno al 
     INNER JOIN registro reg ON reg.carnet = al.carnet

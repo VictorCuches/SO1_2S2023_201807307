@@ -18,7 +18,6 @@ const RealTime = () => {
 
   const handleSelectChange = (event) => {
     const valueSelect = event.target.value;
-    console.log(valueSelect)
     setSemester(valueSelect);    
     loadRegistros()
   };
