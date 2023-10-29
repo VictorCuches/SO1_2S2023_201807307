@@ -18,7 +18,8 @@ db_connection = mysql.connector.connect(
 )
 db_cursor = db_connection.cursor()
 
-redis_client = redis.StrictRedis(host="http://34.30.181.54:6379/",
+redis_client = redis.StrictRedis(host=config("REDIS_HOST"),
+                                 port=config("REDIS_PORT"), 
                                  db=config("REDIS_DB"))
 
 @app.route('/')
@@ -66,6 +67,25 @@ def registrar_alumno():
     except Exception as e:
         print(e)
         return jsonify({'error': str(e)}), 500
+
+@app.route('/ver_registros', methods=['GET'])
+def ver_registros():
+    try:
+        keys = redis_client.keys("alumno:*")
+
+        registros = []
+
+        for key in keys:
+            registro_json = redis_client.get(key)
+            registro = json.loads(registro_json)
+            registros.append(registro)
+
+        return jsonify(registros), 200
+
+    except Exception as e:
+        print(e)
+        return jsonify({'error': str(e)}), 500
+
 
 def registro_mysql(data):
     try:

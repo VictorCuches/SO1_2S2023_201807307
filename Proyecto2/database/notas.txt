@@ -2,3 +2,6 @@
 kubectl apply -f redisDeploy.yaml 
 
 kubectl get service -n so1p2
+
+kubectl apply -f redisDeploy.yaml 
+kubectl delete -f redisDeploy.yaml 
