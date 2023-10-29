@@ -1,8 +1,10 @@
 #crear imagen de docker
 docker build -t gcr.io/swift-synthesis-397705/server_python .
+sudo docker build -t victorcuches28/server_python .
 
 #subir imagen a container registry
 sudo docker push gcr.io/swift-synthesis-397705/server_python
+sudo docker push victorcuches28/server_python
 
 #desplegar imagen 
 kubectl create deployment python-deployment --image gcr.io/swift-synthesis-397705/server_python

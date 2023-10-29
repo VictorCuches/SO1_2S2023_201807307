@@ -8,19 +8,20 @@ from decouple import config
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-print(config("MYSQLDB_HOST"))
+try:
+    db_connection = mysql.connector.connect(
+        host=config("MYSQLDB_HOST"),
+        user=config("MYSQLDB_USER"),
+        password=config("MYSQLDB_PASS"),
+        database=config("MYSQLDB_DB")
+    )
+    db_cursor = db_connection.cursor()
 
-db_connection = mysql.connector.connect(
-    host=config("MYSQLDB_HOST"),
-    user=config("MYSQLDB_USER"),
-    password=config("MYSQLDB_PASS"),
-    database=config("MYSQLDB_DB")
-)
-db_cursor = db_connection.cursor()
-
-redis_client = redis.StrictRedis(host=config("REDIS_HOST"),
-                                 port=config("REDIS_PORT"), 
-                                 db=config("REDIS_DB"))
+    redis_client = redis.StrictRedis(host=config("REDIS_HOST"),
+                                    port=config("REDIS_PORT"), 
+                                    db=config("REDIS_DB"))
+except Exception as e:
+    print("Error al conectar a redis o mysql ", str(e))
 
 @app.route('/')
 def hola_mundo():
@@ -91,13 +92,29 @@ def registro_mysql(data):
     try:
         db_cursor.callproc("registro_estudiante", (data['carnet'], data['nombre'], data['curso'], data['nota'], data['semestre'], data['year']))
         db_connection.commit()
-
         print("*** PYTHON/MYSQL *** registro almacenado")
 
     except Exception as e:
         print(str(e))
     # finally:
     #     db_cursor.close()
+
+@app.route('/cursos', methods=['GET'])
+def get_cursos():
+    cur = db_cursor
+    cur.execute("SELECT * FROM curso")
+    data = cur.fetchall()
+    cur.close()
+
+    curso_list = []
+    for curso in data:
+        curso_dict = {
+            'cod_curso': curso[0],
+            'nombre': curso[1]
+        }
+        curso_list.append(curso_dict)
+
+    return jsonify(curso_list)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=4000)

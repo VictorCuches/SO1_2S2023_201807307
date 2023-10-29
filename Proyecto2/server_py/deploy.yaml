@@ -17,7 +17,7 @@ spec:
         app: api-python
     spec:
       containers:
-      - image: gcr.io/swift-synthesis-397705/server_python
+      - image: victorcuches28/server_python
         imagePullPolicy: Always
         name: api-python
         ports:
