@@ -10,20 +10,20 @@ from decouple import config
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-try:
-    db_connection = mysql.connector.connect(
-        host=config("MYSQLDB_HOST"),
-        user=config("MYSQLDB_USER"),
-        password=config("MYSQLDB_PASS"),
-        database=config("MYSQLDB_DB")
-    )
-    db_cursor = db_connection.cursor()
+db_connection = mysql.connector.connect(
+    host=config("MYSQLDB_HOST"),
+    user=config("MYSQLDB_USER"),
+    password=config("MYSQLDB_PASS"),
+    database=config("MYSQLDB_DB")
+)
+db_cursor = db_connection.cursor()
 
+try:
     redis_client = redis.StrictRedis(host=config("REDIS_HOST"),
                                     port=config("REDIS_PORT"), 
                                     db=config("REDIS_DB"))
 except Exception as e:
-    print("Error al conectar a redis o mysql ", str(e))
+    print("Error al conectar a redis ", str(e))
 
 @app.route('/')
 def hola_mundo():
