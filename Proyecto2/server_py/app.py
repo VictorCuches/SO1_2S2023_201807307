@@ -20,7 +20,7 @@ db_cursor = db_connection.cursor()
 
 try:
     redis_client = redis.StrictRedis(host="redis",
-                                    port="6379", 
+                                    port="6379",
                                     db=1)
 except Exception as e:
     print("Error al conectar a redis ", str(e))
@@ -31,7 +31,7 @@ def hola_mundo():
 
 @app.route('/prueba')
 def prueba():
-    return 'CAMBIO DE ENDPOINT'
+    return 'CAMBIO DE ENDPOINT - 201807307'
 
 
 @app.route('/registrar_alumno', methods=['POST'])
