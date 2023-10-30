@@ -11,17 +11,17 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 db_connection = mysql.connector.connect(
-    host=config("MYSQLDB_HOST"),
-    user=config("MYSQLDB_USER"),
-    password=config("MYSQLDB_PASS"),
-    database=config("MYSQLDB_DB")
+    host="34.170.239.207",
+    user="root",
+    password="root",
+    database="sopes"
 )
 db_cursor = db_connection.cursor()
 
 try:
-    redis_client = redis.StrictRedis(host=config("REDIS_HOST"),
-                                    port=config("REDIS_PORT"), 
-                                    db=config("REDIS_DB"))
+    redis_client = redis.StrictRedis(host="redis",
+                                    port="6378", 
+                                    db=1)
 except Exception as e:
     print("Error al conectar a redis ", str(e))
 
@@ -103,6 +103,7 @@ def registro_mysql(data):
 
 @app.route('/cursos', methods=['GET'])
 def get_cursos():
+    cur = db_cursor
     db_cursor.execute("SELECT * FROM curso")
     data = cur.fetchall()
     cur.close()
