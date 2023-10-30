@@ -3,15 +3,16 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const GraphPie = ( { title, usageValue } ) => {
+const GraphPie = ( { dataValue } ) => {
+  console.log("GraphPie ",dataValue)
   const data = {
-    labels: [title],
+    labels: ['Aprobados', 'Reprobados'],
     datasets: [
       {
         label: "Libre",
-        data: [usageValue, 100 - usageValue],
-        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
-        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+        data: dataValue,
+        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)"],
+        borderColor: ["rgba(54, 162, 235, 1)", "rgba(255, 99, 132, 1)"],
         borderWidth: 2,
       },
     ],

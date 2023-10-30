@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const GraphLine = ({title, color, dates, dataHistory}) => {
+const GraphLine = ({ title, type,  dataGraph }) => {
     const options = {
         responsive: true,
         plugins: {
@@ -35,16 +35,16 @@ const GraphLine = ({title, color, dates, dataHistory}) => {
         },
       };
 
-      const labels = dates;
+      const labels = (type === 'count' ) ? dataGraph.map(item => item.cod_curso) : dataGraph.map(item => item.carnet);
 
       const data = {
         labels,
         datasets: [
           {
-            label: 'Dataset 1',
-            data: dataHistory,
-            borderColor: color,
-            backgroundColor: color,
+            label: 'Valor',
+            data: (type === 'count' ) ? dataGraph.map(item => item.cantidad) : dataGraph.map(item => parseInt(item.promedio)),
+            borderColor: "blue",
+            backgroundColor: "blue",
           }, 
         ],
       };

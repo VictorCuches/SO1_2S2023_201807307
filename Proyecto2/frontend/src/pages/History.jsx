@@ -6,6 +6,9 @@ import TableData from "../components/TableData";
 
 const History = () => {
   const [dataStudents, setDataStudents] = useState([]);
+  const [dataApprovedCourse, setDataApprovedCourse] = useState([]);
+  const [dataCourseStudent, setDataCourseStudent] = useState([]);
+  const [dataAvgStudent, setDataAvgStudent] = useState([]);
 
 
   const listVM = [
@@ -20,14 +23,70 @@ const History = () => {
     console.log("REACT: loadDataHistory")
     try {
       const response = await fetch(`${API_NODE_URL}/getAllData`);
+
+      console.log(`${API_NODE_URL}/getAllData`)
       if (!response.ok) {
         throw new Error("No se pudo obtener la respuesta de la API.");
       }
 
       const data = await response.json();
 
-      console.log(data);
       setDataStudents(data);
+ 
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  const loadApprovedCourse = async () => {
+    console.log("REACT: loadApprovedCourse")
+    try {
+      const response = await fetch(`${API_NODE_URL}/approvedCourse/SO1/2S`);
+
+      if (!response.ok) {
+        throw new Error("No se pudo obtener la respuesta de la API.");
+      }
+
+      const data = await response.json();
+
+      setDataApprovedCourse(data);
+ 
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  const loadCourseStudent = async () => {
+    console.log("REACT: loadCourseStudent")
+    try {
+      const response = await fetch(`${API_NODE_URL}/courseStudent/1S`);
+
+      if (!response.ok) {
+        throw new Error("No se pudo obtener la respuesta de la API.");
+      }
+
+      const data = await response.json();
+
+      setDataCourseStudent(data);
+ 
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  const loadAvgStudent = async () => {
+    console.log("REACT: loadAvgStudent")
+    try {
+      const response = await fetch(`${API_NODE_URL}/avgStudent/2S`);
+
+      if (!response.ok) {
+        throw new Error("No se pudo obtener la respuesta de la API.");
+      }
+
+      const data = await response.json();
+
+      console.log("avgStudnet",data);
+      setDataAvgStudent(data);
  
     } catch (error) {
       console.log(error.message);
@@ -42,6 +101,9 @@ const History = () => {
 
   useEffect(() => {   
     loadDataHistory();
+    loadApprovedCourse();
+    loadCourseStudent();
+    loadAvgStudent();
   }, []);
 
   return (
@@ -58,17 +120,18 @@ const History = () => {
         <div className="col-4">
           <div className="card shadow-lg mb-5 bg-white rounded">
             <div className="card-body">
-              <GraphPie/>
+              { dataCourseStudent.length > 0 ? (<GraphPie dataValue={[dataApprovedCourse[0].Aprobados, dataApprovedCourse[0].Reprobados]} />) : (<div>Cargando</div>) }
+              
             </div>
           </div>
           <div className="card shadow-lg mb-5 bg-white rounded">
             <div className="card-body">
-              <GraphLine/>
+              { dataCourseStudent.length > 0 ? (<GraphLine title='Cursos con mayor numero de alumnos' type='count' dataGraph={dataCourseStudent} />) : (<div>Cargando</div>) }
             </div>
           </div>
           <div className="card shadow-lg mb-5 bg-white rounded">
             <div className="card-body">
-              <GraphLine/>
+              { dataAvgStudent.length > 0 ? (<GraphLine title='Alumnos con mejor promedio' type='avg' dataGraph={dataAvgStudent} />) : (<div>Cargando</div>) }
             </div>
           </div>
         </div>
