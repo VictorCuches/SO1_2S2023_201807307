@@ -20,7 +20,7 @@ db_cursor = db_connection.cursor()
 
 try:
     redis_client = redis.StrictRedis(host="redis",
-                                    port="6378", 
+                                    port="6379", 
                                     db=1)
 except Exception as e:
     print("Error al conectar a redis ", str(e))
@@ -69,7 +69,7 @@ def registrar_alumno():
 
     except Exception as e:
         print(e)
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error en registrar alumno: ': str(e)}), 500
 
 @app.route('/ver_registros', methods=['GET'])
 def ver_registros():
@@ -87,7 +87,7 @@ def ver_registros():
 
     except Exception as e:
         print(e)
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error en ver registros: ': str(e)}), 500
 
 
 def registro_mysql(data):
