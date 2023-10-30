@@ -1,20 +1,15 @@
-# Usa una imagen base de Python
-FROM python:3.8
+FROM alpine:latest
 
-# Establece el directorio de trabajo en /app
+RUN apk add --no-cache python3-dev \
+    && python3 -m ensurepip \
+    && pip3 install --upgrade pip
+
 WORKDIR /app
 
-# Copia el archivo requirements.txt al contenedor
-COPY requirements.txt requirements.txt
+COPY . /app
 
-# Instala las dependencias de la aplicación
-RUN pip install -r requirements.txt
+RUN pip3 --no-cache-dir install -r requirements.txt
 
-# Copia todos los archivos de la aplicación al contenedor
-COPY . .
+EXPOSE 5000
 
-# Expón el puerto en el que se ejecutará la aplicación
-EXPOSE 4000
-
-# Define el comando para ejecutar la aplicación
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]

@@ -7,13 +7,13 @@ npm install redis
 
 
 #crear imagen de docker
-sudo docker build -t victorcuches28/proyecto_uno_node .
+sudo docker build -t victorcuches28/server_node .
 
 #correr imagen 
-sudo docker run --rm -it -p 5000:5000 --name node_server_container --network mi_red victorcuches28/proyecto_uno_node
+sudo docker run --rm -it -p 5000:5000 victorcuches28/server_node
 
 #subir imagen a docker hub
-sudo docker push victorcuches28/proyecto_uno_node
+sudo docker push victorcuches28/server_node
 
 
 
