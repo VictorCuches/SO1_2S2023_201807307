@@ -103,8 +103,7 @@ def registro_mysql(data):
 
 @app.route('/cursos', methods=['GET'])
 def get_cursos():
-    cur = db_cursor
-    cur.execute("SELECT * FROM curso")
+    db_cursor.execute("SELECT * FROM curso")
     data = cur.fetchall()
     cur.close()
 
