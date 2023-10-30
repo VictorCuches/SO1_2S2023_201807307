@@ -12,7 +12,7 @@ COPY requirements.txt /app
 RUN pip install -r requirements.txt
 
 # Expone el puerto en el que se ejecutará tu aplicación Flask
-EXPOSE 9000
+EXPOSE 5000
 
 # Define el comando para ejecutar tu aplicación cuando se inicie el contenedor
 CMD ["python", "app.py"]
