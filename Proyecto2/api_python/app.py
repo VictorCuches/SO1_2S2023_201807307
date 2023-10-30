@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define una ruta que retornará "Hola mundo" cuando se acceda
 @app.route('/')
 def hola_mundo():
-    return 'Pruebas cuchau'
+    return 'Hola mundo 201807307'
 
 # Si ejecutas este script directamente, inicia la aplicación en el puerto 5000 por defecto
 if __name__ == '__main__':

@@ -1,15 +1,18 @@
-FROM alpine:latest
+# Utiliza una imagen base de Python
+FROM python:3.8-slim
 
-RUN apk add --no-cache python3-dev \
-    && python3 -m ensurepip \
-    && pip3 install --upgrade pip
-
+# Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
-COPY . /app
+# Copia los archivos de tu aplicación al directorio de trabajo en el contenedor
+COPY app.py /app
 
-RUN pip3 --no-cache-dir install -r requirements.txt
+# Instala las dependencias de tu aplicación (si las tienes en un archivo requirements.txt)
+COPY requirements.txt /app
+RUN pip install -r requirements.txt
 
+# Expone el puerto en el que se ejecutará tu aplicación Flask
 EXPOSE 5000
 
-CMD ["python3", "app.py"]
+# Define el comando para ejecutar tu aplicación cuando se inicie el contenedor
+CMD ["python", "app.py"]

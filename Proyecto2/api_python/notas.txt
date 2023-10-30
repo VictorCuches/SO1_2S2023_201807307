@@ -4,7 +4,7 @@ sudo docker build -t victorcuches28/cuchau .
 
 sudo docker push victorcuches28/cuchau
 
-sudo docker run --rm -it -p 9000:9000 victorcuches28/cuchau
+sudo docker run --rm -it -p 6000:5000 victorcuches28/cuchau
 
 
 
