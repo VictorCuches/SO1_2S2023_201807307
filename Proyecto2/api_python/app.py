@@ -10,4 +10,4 @@ def hola_mundo():
 
 # Si ejecutas este script directamente, inicia la aplicación en el puerto 5000 por defecto
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000)
+    app.run(host='0.0.0.0',port=6000)
