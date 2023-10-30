@@ -1,5 +1,5 @@
 Flask==2.0.1
-flask-cors
+Flask-CORS==3.0.10
 redis
 mysql-connector-python
 python-decouple

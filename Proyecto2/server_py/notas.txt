@@ -22,7 +22,7 @@ kubectl get deployment
 kubectl create namespace nombreeee
 
 
-
+sudo docker run --rm -it -p 4000:4000 victorcuches28/server_python
 
 # comandos en la instancia vm
 sudo apt update
