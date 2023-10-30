@@ -11,11 +11,11 @@ dotenv.config()
 const { MYSQLDB_HOST, MYSQLDB_ROOT_PASSWORD, MYSQLDB_DATABASE, MYSQLDB_DOCKER_PORT, API_GO_URL } = process.env;
 
 const dbConfig = {
-    host: MYSQLDB_HOST,
-    port: MYSQLDB_DOCKER_PORT,
+    host: "34.170.239.207",
+    port: "3306",
     user: 'root',
-    password: MYSQLDB_ROOT_PASSWORD,
-    database: MYSQLDB_DATABASE,
+    password: "root",
+    database: "sopes",
 };
 
 async function connectToDatabase() {

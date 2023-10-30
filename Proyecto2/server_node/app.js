@@ -22,10 +22,10 @@ const io = new Server(server, {
 
 
 const client = new Redis({
-  host: 'localhost',
+  host: 'redis',
   port: 6379,
   password: '',
-  db: 15,
+  db: 1,
 });
 
 app.get('/', (req, res) => {
