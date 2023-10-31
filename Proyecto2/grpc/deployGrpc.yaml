@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: grpc-Client
+  name: grpc-Client
+  namespace: so1p2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-Client
+  minReadySeconds: 20
+  template:
+    metadata:
+      labels:
+        app: grpc-Client
+    spec:
+      containers:
+      - image: victorcuches28/server_grpc_client
+        imagePullPolicy: Always
+        name: grpc-Client
+        ports:
+          - containerPort: 7000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grpc-Client
+  name: grpc-Client
+  namespace: so1p2
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 7000
+      targetPort: 7000
+  selector:
+    app: grpc-Client
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: grpc-server
+  name: grpc-server
+  namespace: so1p2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-server
+  minReadySeconds: 20
+  template:
+    metadata:
+      labels:
+        app: grpc-server
+    spec:
+      containers:
+      - image: victorcuches28/server_grpc_server
+        imagePullPolicy: Always
+        name: grpc-server
+        ports:
+          - containerPort: 7001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grpc-server
+  name: grpc-server
+  namespace: so1p2
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 7001
+      targetPort: 7001
+  selector:
+    app: grpc-server

@@ -19,11 +19,13 @@ db_connection = mysql.connector.connect(
 db_cursor = db_connection.cursor()
 
 try:
-    redis_client = redis.StrictRedis(host="redis",
+    redis_client = redis.StrictRedis(host="localhost",
                                     port="6379",
                                     db=1)
 except Exception as e:
     print("Error al conectar a redis ", str(e))
+
+next_id = 1
 
 @app.route('/')
 def hola_mundo():
@@ -36,9 +38,10 @@ def prueba():
 
 @app.route('/registrar_alumno', methods=['POST'])
 def registrar_alumno():
+    global next_id
     try:
         data = request.get_json()
- 
+
         required_fields = ['carnet', 'nombre', 'curso', 'nota', 'semestre', 'year']
         for field in required_fields:
             if field not in data:
@@ -47,7 +50,11 @@ def registrar_alumno():
         carnet = data['carnet']
         curso = data['curso']
         year = data['year']
- 
+
+        # Generamos una clave única basada en el próximo ID
+        clave_incr = f'alumno:{next_id}'
+        next_id += 1  # Incrementamos el ID
+
         alumno_data = {
             'carnet': carnet,
             'nombre': data['nombre'],
@@ -56,16 +63,17 @@ def registrar_alumno():
             'semestre': data['semestre'],
             'year': year
         }
- 
+
         alumno_json = json.dumps(alumno_data)
- 
-        redis_key = f'alumno:{carnet}:{curso}:{year}'
-        redis_client.set(redis_key, alumno_json)
+
+        # Usamos la clave única generada
+        redis_client.set(clave_incr, alumno_json)
 
         print("*** REDIS *** registro almacenado")
         registro_mysql(data)
 
         return jsonify({'message': f'Alumno "{data["nombre"]}" registrado en Redis'}), 201
+
 
     except Exception as e:
         print(e)
@@ -92,7 +100,7 @@ def ver_registros():
 
 def registro_mysql(data):
     try:
-        db_cursor.callproc("registro_estudiante", (data['carnet'], data['nombre'], data['curso'], data['nota'], data['semestre'], data['year']))
+        db_cursor.callproc("registro_estudiante2", (data['carnet'], data['nombre'], data['curso'], data['nota'], data['semestre'], data['year']))
         db_connection.commit()
         print("*** PYTHON/MYSQL *** registro almacenado")
 

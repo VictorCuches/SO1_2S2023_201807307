@@ -22,7 +22,7 @@ type server struct {
 }
 
 const (
-	port = ":3001"
+	port = ":7001"
 )
 
 type Data struct {
@@ -37,11 +37,11 @@ type Data struct {
 var _ = godotenv.Load(".env") // Cargar del archivo llamado ".env"
 var (
 	ConnectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
-		os.Getenv("MYSQLDB_USER"),
-		os.Getenv("MYSQLDB_PASS"),
-		os.Getenv("MYSQLDB_HOST"),
-		os.Getenv("MYSQLDB_PORT"),
-		os.Getenv("MYSQLDB_DB"))
+		"root",
+		"root",
+		"34.170.239.207",
+		"3306",
+		"sopes"
 )
 
 func main() {
@@ -95,10 +95,14 @@ func insertDataMySQL(data Data) error {
 		fmt.Println("ERROR AL CONECTAR A LA BASE DE DATOS ", err)
 		return err
 	}
-	_, err = bd.Exec("INSERT INTO calificacion (carnet, nombre, curso, nota, semestre, year) VALUES (?, ?, ?, ?, ?, ?)", data.Carnet, data.Nombre, data.Curso, data.Nota, data.Semestre, data.Year)
+
+	_, err = bd.Exec("CALL registro_estudiante2(?, ?, ?, ?, ?, ?)", data.Carnet, data.Nombre, data.Curso, data.Nota, data.Semestre, data.Year)
+
+	fmt.Println("Datos guardados en la base de datos")
 	if err != nil {
-		fmt.Println("ERROR AL INSERTAR DATOS ", err)
+		fmt.Println("ERROR AL EJECUTAR PROCEDIMIENTO ALMACENADO ", err)
 		return err
 	}
+
 	return err
 }

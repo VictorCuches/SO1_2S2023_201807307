@@ -10,7 +10,7 @@ FROM
     INNER JOIN registro reg ON reg.carnet = alu.carnet
 WHERE 
 	reg.cod_curso = 'SO1'
-    AND reg.semestre = '1S';
+    AND reg.semestre = '2S';
     
     
 -- Gráfica de Barras de Cursos con Mayor número de alumnos en un semestre específico. (Mostrar Top 3).
@@ -21,7 +21,7 @@ FROM
 	alumno alu 
     INNER JOIN registro reg ON reg.carnet = alu.carnet
 WHERE 
-	reg.semestre = '1S'
+	reg.semestre = '2S'
 GROUP BY 
 	reg.cod_curso
 ORDER BY 
