@@ -39,7 +39,7 @@ const RealTime = () => {
   useEffect(() => {   
     loadRegistros();
 
-  }, []);
+  }, [semester]);
 
   return (
     <div className="container ">
