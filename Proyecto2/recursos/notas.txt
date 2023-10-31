@@ -16,3 +16,7 @@ kubectl get all
 
 # crear reglas de firewall
 conferencia del curso explican como hacerlo paso a paso
+
+
+
+git clone https://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@github.com/VictorCuches/SO1_2S2023_201807307.git

@@ -1,9 +1,14 @@
 
 #crear imagen de docker
-sudo docker build -t victorcuches28/proyecto_uno_frontend .
+sudo docker build -t victorcuches28/frontend_sopes .
 
 #correr imagen 
-sudo docker run --rm -it -p 3000:3000 victorcuches28/proyecto_uno_frontend
+sudo docker run --rm -it -p 3000:3000 victorcuches28/frontend_sopes
 
 #subir imagen a docker hub
-sudo docker push victorcuches28/proyecto_uno_frontend
+sudo docker push victorcuches28/frontend_sopes
+
+
+# container registry
+docker build -t gcr.io/swift-synthesis-397705/dashboard_sopes .
+docker push gcr.io/swift-synthesis-397705/dashboard_sopes

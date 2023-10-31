@@ -1,21 +1,10 @@
-FROM golang:1.21.1 
+FROM golang:1.17-alpine
 
-# Crea un directorio de trabajo en el contenedor
 WORKDIR /app_client
+COPY . .
 
-# Instala utilidades básicas (procps) que incluye el comando "kill"
-RUN apt-get update && apt-get install -y procps
+RUN go mod download
 
-# Copia los archivos del proyecto al directorio de trabajo
-COPY main.go .
-COPY go.mod .
-COPY go.sum .
-
-# Compila el proyecto Go
-RUN go build main.go
-
-# Expone el puerto 7000 que utiliza tu aplicación
 EXPOSE 7000
 
-# Ejecuta la aplicación cuando se inicia el contenedor
-CMD ["./main"]
+CMD ["go", "run", "main.go"]

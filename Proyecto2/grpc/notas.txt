@@ -1,3 +1,24 @@
+
+#crear imagen de docker
+sudo docker build -t victorcuches28/grpc_client .
+#correr imagen 
+sudo docker run --rm -it -d -p 7000:7000 victorcuches28/grpc_client
+
+#subir imagen a docker hub
+sudo docker push victorcuches28/grpc_client
+
+------------------------------------------------------------------
+
+#crear imagen de docker
+sudo docker build -t victorcuches28/grpc_server .
+#correr imagen 
+sudo docker run --rm -it -p 7001:7001 victorcuches28/grpc_server
+
+#subir imagen a docker hub
+sudo docker push victorcuches28/grpc_server
+
+
+
 # crear .mod
 go mod init mi_proyecto
 
