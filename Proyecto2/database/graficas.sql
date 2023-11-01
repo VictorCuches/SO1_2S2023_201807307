@@ -1,6 +1,9 @@
 use sopes;
+DELETE FROM registro
+DELETE FROM alumno
 
 SELECT 
+	reg.cod_registro,
 	al.carnet, al.nombre,
 	reg.nota, reg.semestre, reg.anio, reg.cod_curso
  FROM 

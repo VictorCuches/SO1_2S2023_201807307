@@ -43,7 +43,7 @@ VALUES('AYD1', 'Análisis y Diseño 1');
 
 SELECT * FROM curso;
 
-CALL registro_estudiante(201807307, 'Victor Cuches', 'SO1', 60, '2S', 2023);
+CALL registro_estudiante2(201807307, 'Victor Cuches', 'SO1', 60, '2S', 2023);
 
 SELECT 
 	reg.cod_registro,
