@@ -1,26 +1,13 @@
-# Usamos una imagen base de Node.js para construir la aplicación React
-FROM node:14
-
-# Establecemos el directorio de trabajo en /app
-WORKDIR /app_frontend
-
-# Copiamos el archivo package.json y package-lock.json para instalar dependencias
-COPY package*.json ./
-
-# Instalamos las dependencias
-RUN npm install
-
-# Copiamos los archivos de la aplicación React al directorio de trabajo en el contenedor
+### STAGE 1: Build ###
+FROM node:16-alpine AS node
+WORKDIR /app
 COPY . .
+RUN yarn install
+ENV REACT_APP_API_URL http://34.136.138.86:5000
+RUN yarn build
 
-# Construimos la aplicación React
-RUN npm run build
-
-# Configuramos un servidor web ligero para servir la aplicación React
-RUN npm install -g serve
-
-# Exponemos el puerto en el que se ejecutará el servidor web
+### STAGE 2: Run ###
+FROM nginx:1.21.6-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=node /app/build/ /usr/share/nginx/html
 EXPOSE 3000
-
-# Comando para iniciar la aplicación cuando se ejecute el contenedor
-CMD ["serve", "-s", "build", "-l", "3000"]
