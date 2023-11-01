@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GraphLine from "../components/GraphLine";
+import GraphBar from "../components/GraphBar";
 import GraphPie from "../components/GraphPie";
 
 import TableData from "../components/TableData";
@@ -7,7 +8,7 @@ import Form from "react-bootstrap/Form";
 
 const History = () => {
   const [dataStudents, setDataStudents] = useState([]);
-  const [dataApprovedCourse, setDataApprovedCourse] = useState([]);
+  const [dataApprovedCourse, setDataApprovedCourse] = useState([{Aprobados:0,Reprobados:0}]);
   const [dataCourseStudent, setDataCourseStudent] = useState([]);
   const [dataAvgStudent, setDataAvgStudent] = useState([]);
 
@@ -207,7 +208,7 @@ const History = () => {
                     ))}
                   </Form.Select>
               </div>
-              { dataCourseStudent.length > 0 ? (<GraphLine title='Cursos con mayor numero de alumnos' type='count' dataGraph={dataCourseStudent} />) : (<div>Cargando</div>) }
+              { dataCourseStudent.length > 0 ? (<GraphBar title='Cursos con mayor numero de alumnos' type='count' dataGraph={dataCourseStudent} />) : (<div>Cargando</div>) }
             </div>
           </div>
           <div className="card shadow-lg mb-5 bg-white rounded">
@@ -226,7 +227,7 @@ const History = () => {
                   ))}
                 </Form.Select>
               </div>
-              { dataAvgStudent.length > 0 ? (<GraphLine title='Alumnos con mejor promedio' type='avg' dataGraph={dataAvgStudent} />) : (<div>Cargando</div>) }
+              { dataAvgStudent.length > 0 ? (<GraphBar title='Alumnos con mejor promedio' type='avg' dataGraph={dataAvgStudent} />) : (<div>Cargando</div>) }
             </div>
           </div>
         </div>

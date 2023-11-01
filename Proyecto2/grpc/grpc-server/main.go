@@ -7,10 +7,8 @@ import (
 	pb "golangServer/grpcServer"
 	"log"
 	"net"
-	"os"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/joho/godotenv"
 	"google.golang.org/grpc"
 )
 
@@ -34,14 +32,23 @@ type Data struct {
 	Year     uint32
 }
 
-var _ = godotenv.Load(".env") // Cargar del archivo llamado ".env"
-var (
-	ConnectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
-		"root",
-		"root",
-		"34.170.239.207",
-		"3306",
-		"sopes"
+// var _ = godotenv.Load(".env") // Cargar del archivo llamado ".env"
+
+// var = (
+// 	ConnectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+// 		"root",
+// 		"root",
+// 		"34.170.239.207",
+// 		"3306",
+// 		"sopes"
+// )
+
+var ConnectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+	"root",
+	"root",
+	"34.170.239.207",
+	"3306",
+	"sopes",
 )
 
 func main() {

@@ -27,7 +27,9 @@ class Reader():
         print(">> Reader: Iniciando lectura del archivo de datos")
         try:
             with open("registroNotas.json", "r") as data_file:
+                print(">> Reader: Archivo cargado")
                 self.array = json.loads(data_file.read())
+                print(f'>> Reader: Se encontraron {len(self.array)} registros')
         except Exception as error:
             print(f'>> Reader: Error en {error}')
 
@@ -46,7 +48,7 @@ class MessageTraffic(HttpUser):
         if ( random_data is not None ):
             data_to_send = json.dumps(random_data)
             printDebug(data_to_send)
-            self.client.post("/", json=random_data)
+            self.client.post("/", json=random_data) #quitar / para apy python
         else:
             print(">> MessageTraffic: Envío finalizado")
             self.stop(True)

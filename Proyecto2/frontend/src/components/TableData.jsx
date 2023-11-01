@@ -22,7 +22,7 @@ function TableData({ dataEstudents}) {
               <td>{index + 1}</td>
               <td>{item.carnet}</td>
               <td>{item.nombre}</td>
-              <td>{item.curso}</td>
+              <td>{item.cod_curso}</td>
               <td>{item.nota}</td>
               <td>{item.semestre}</td>
               <td>{item.anio}</td>

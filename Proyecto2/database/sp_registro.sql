@@ -1,7 +1,7 @@
 -- FUNCIONALIDAD: REGISTRAR_ESTUDIANTE --
 DELIMITER //
 
-CREATE PROCEDURE registro_estudiante2(
+CREATE PROCEDURE registro_estudiante3(
 	IN carnet_ BIGINT,
     IN nombre VARCHAR(100),
     IN curso VARCHAR(10),
