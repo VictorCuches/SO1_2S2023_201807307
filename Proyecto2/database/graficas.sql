@@ -1,5 +1,14 @@
 use sopes;
 
+SELECT 
+	al.carnet, al.nombre,
+	reg.nota, reg.semestre, reg.anio, reg.cod_curso
+ FROM 
+	alumno al 
+	INNER JOIN registro reg ON reg.carnet = al.carnet
+ ORDER BY 
+	reg.cod_registro ASC
+
 
 -- Gráfica Circular de las Notas de un Curso en un semestre. (No. Aprobados y Reprobados)
 SELECT
@@ -27,7 +36,7 @@ GROUP BY
 ORDER BY 
 	cantidad DESC
 LIMIT 3;
-    
+
 -- Gráfica de Barras de Alumnos con mejor Promedio (Mostrar únicamente un Top 5)
 SELECT
 	alu.carnet, 

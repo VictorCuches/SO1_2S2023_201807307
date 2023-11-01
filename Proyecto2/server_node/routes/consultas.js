@@ -59,7 +59,9 @@ router.get('/getAllData', async (req, res) => {
                 reg.nota, reg.semestre, reg.anio, reg.cod_curso
              FROM 
                 alumno al 
-                INNER JOIN registro reg ON reg.carnet = al.carnet`
+                INNER JOIN registro reg ON reg.carnet = al.carnet
+             ORDER BY 
+	            reg.cod_registro ASC;`
         );
         res.json(rows);
         
