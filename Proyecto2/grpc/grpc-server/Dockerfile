@@ -1,4 +1,4 @@
-FROM golang:1.21.1 
+FROM golang:1.21.3
 
 # Crea un directorio de trabajo en el contenedor
 WORKDIR /app_server
